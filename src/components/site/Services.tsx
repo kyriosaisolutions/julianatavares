@@ -9,20 +9,20 @@ const services = [
   {
     title: "Ondulados",
     desc: "Cortes que valorizam o movimento natural das ondas, com finalização leve e duradoura.",
-    img: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=700&q=80",
-    bg: "sage-light" as const,
+    img: "https://images.unsplash.com/photo-1605980776566-0486c3ac7617?w=800&q=80&fit=crop",
+    bg: "nude-light" as const,
   },
   {
     title: "Cacheados",
     desc: "Técnicas exclusivas para definir cachos com volume, brilho e respeito ao formato.",
-    img: "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=700&q=80",
-    bg: "nude-light" as const,
+    img: "https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=800&q=80&fit=crop",
+    bg: "sage" as const,
   },
   {
     title: "Crespos",
     desc: "Hidratação profunda, modelagem precisa e cuidados pensados para a beleza dos crespos.",
-    img: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=700&q=80",
-    bg: "sage" as const,
+    img: "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=800&q=80&fit=crop",
+    bg: "sage-light" as const,
   },
 ];
 
@@ -56,7 +56,7 @@ export function Services() {
   }, []);
 
   return (
-    <section ref={root} id="servicos" className="py-24 lg:py-32 bg-cream overflow-hidden">
+    <section ref={root} id="servicos" className="py-24 lg:py-32 bg-sage-light/50 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-12 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -36,7 +36,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section ref={root} id="top" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+    <section ref={root} id="top" className="hero relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-sage-light/30">
       <div className="mx-auto max-w-7xl px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left */}
         <div className="lg:col-span-4 relative">
@@ -45,7 +45,7 @@ export function Hero() {
             <br />
             <span className="inline-flex items-center gap-3">
               <span className="italic text-nude">liberta</span>
-              <CircleArrow className="text-nude -rotate-45" size={44} />
+              <CircleArrow className="text-sage-dark -rotate-45" size={44} />
             </span>
             <br />
             <span className="italic">seus cachos</span>
@@ -55,30 +55,30 @@ export function Hero() {
             className="mt-12 inline-flex items-center gap-4 group"
           >
             <span className="font-display italic text-xl text-ink">Saiba mais</span>
-            <CircleArrow className="text-nude transition-transform duration-300 group-hover:translate-x-1" />
+            <CircleArrow className="text-sage-dark transition-transform duration-300 group-hover:translate-x-1" />
           </a>
         </div>
 
         {/* Right: arched images */}
-        <div className="lg:col-span-7 lg:col-start-6 relative flex items-end justify-center gap-4 md:gap-8">
-          <div className="jt-hero-front relative w-[280px] h-[400px] md:w-[380px] md:h-[540px] shrink-0">
+        <div className="jt-hero-wrap lg:col-span-7 lg:col-start-6 relative flex items-end justify-center gap-4 md:gap-8">
+          <div className="jt-hero-front hero-img-main relative w-[280px] h-[400px] md:w-[380px] md:h-[540px] shrink-0">
             <ArchedImage
-              bg="nude-light"
-              src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=800&q=80"
-              alt="Mulher com cabelo crespo definido"
+              bg="sage-light"
+              src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=1200&q=80&fit=crop"
+              alt="Mulher com cabelo cacheado"
               className="w-full h-full"
               offset={32}
             />
           </div>
-          <div className="jt-hero-back relative w-[220px] h-[320px] md:w-[280px] md:h-[400px] shrink-0 mb-12">
+          <div className="jt-hero-back hero-img-secondary relative w-[220px] h-[320px] md:w-[280px] md:h-[400px] shrink-0 mb-12">
             <ArchedImage
-              bg="sage"
-              src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80"
-              alt="Mulher com cabelo cacheado"
+              bg="sage-dark"
+              src="https://images.unsplash.com/photo-1554519515-242161756769?w=800&q=80&fit=crop"
+              alt="Mulher com cabelo crespo"
               className="w-full h-full"
               offset={24}
             />
-            <div className="jt-hero-curved absolute inset-0 -m-12 pointer-events-none text-nude hidden md:flex items-center justify-center">
+            <div className="jt-hero-curved curved-text-svg absolute inset-0 -m-12 pointer-events-none text-sage-dark hidden md:flex items-center justify-center">
               <CurvedText
                 text="studio juliana tavares • especialista em cabelos texturizados • "
                 size={420}

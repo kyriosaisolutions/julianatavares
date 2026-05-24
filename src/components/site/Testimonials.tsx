@@ -5,17 +5,17 @@ import { Pill } from "./Pill";
 const items = [
   {
     name: "Mariana Souza",
-    photo: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&q=80",
+    photo: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&h=200&fit=crop",
     text: "Encontrei meu lugar. A Juliana entendeu meus cachos como ninguém. Saí me sentindo outra mulher.",
   },
   {
     name: "Camila Ribeiro",
-    photo: "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=200&q=80",
+    photo: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=200&h=200&fit=crop",
     text: "Atendimento impecável e um corte que respeitou meu cabelo crespo. Recomendo de olhos fechados.",
   },
   {
     name: "Ana Beatriz",
-    photo: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=200&q=80",
+    photo: "https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=200&h=200&fit=crop",
     text: "Meus ondulados nunca tiveram tanto movimento e brilho. Studio de verdade especialista.",
   },
 ];
