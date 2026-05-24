@@ -1,14 +1,5 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import {
-  Outlet,
-  Link,
-  createRootRouteWithContext,
-  useRouter,
-  HeadContent,
-  Scripts,
-} from "@tanstack/react-router";
-
-import appCss from "../styles.css?url";
+import React from "react";
+import { Outlet, Link } from "react-router-dom";
 
 function NotFoundComponent() {
   return (
@@ -32,10 +23,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
-  console.error(error);
-  const router = useRouter();
-
+function ErrorComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
@@ -47,10 +35,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
-            onClick={() => {
-              router.invalidate();
-              reset();
-            }}
+            onClick={() => window.location.reload()}
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Try again
@@ -67,59 +52,37 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Studio Juliana Tavares — Especialista em Cabelos Texturizados" },
-      { name: "description", content: "Studio Juliana Tavares: especialista em cabelos ondulados, cacheados e crespos. Cuidado dedicado para liberar a beleza natural dos seus cachos." },
-      { name: "author", content: "Studio Juliana Tavares" },
-      { property: "og:title", content: "Studio Juliana Tavares — Especialista em Cabelos Texturizados" },
-      { property: "og:description", content: "Studio Juliana Tavares: especialista em cabelos ondulados, cacheados e crespos. Cuidado dedicado para liberar a beleza natural dos seus cachos." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Studio Juliana Tavares — Especialista em Cabelos Texturizados" },
-      { name: "twitter:description", content: "Studio Juliana Tavares: especialista em cabelos ondulados, cacheados e crespos. Cuidado dedicado para liberar a beleza natural dos seus cachos." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8f6c05e2-d9bb-4ef9-b842-bed4b5712c5f/id-preview-f0cc63e7--30682b10-3ab3-466f-991a-c1fca1631f6e.lovable.app-1779648331720.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8f6c05e2-d9bb-4ef9-b842-bed4b5712c5f/id-preview-f0cc63e7--30682b10-3ab3-466f-991a-c1fca1631f6e.lovable.app-1779648331720.png" },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap",
-      },
-    ],
-  }),
-  shellComponent: RootShell,
-  component: RootComponent,
-  notFoundComponent: NotFoundComponent,
-  errorComponent: ErrorComponent,
-});
-
-function RootShell({ children }: { children: React.ReactNode }) {
+export default function RootLayout() {
   return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
+    <>
+      <Helmet>
+        <title>Studio Juliana Tavares — Especialista em Cabelos Texturizados</title>
+        <meta name="description" content="Studio Juliana Tavares: especialista em cabelos ondulados, cacheados e crespos. Cuidado dedicado para liberar a beleza natural dos seus cachos." />
+        <meta name="author" content="Studio Juliana Tavares" />
+        <meta property="og:title" content="Studio Juliana Tavares — Especialista em Cabelos Texturizados" />
+        <meta property="og:description" content="Studio Juliana Tavares: especialista em cabelos ondulados, cacheados e crespos. Cuidado dedicado para liberar a beleza natural dos seus cachos." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Studio Juliana Tavares — Especialista em Cabelos Texturizados" />
+        <meta name="twitter:description" content="Studio Juliana Tavares: especialista em cabelos ondulados, cacheados e crespos. Cuidado dedicado para liberar a beleza natural dos seus cachos." />
+        <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8f6c05e2-d9bb-4ef9-b842-bed4b5712c5f/id-preview-f0cc63e7--30682b10-3ab3-466f-991a-c1fca1631f6e.lovable.app-1779648331720.png" />
+        <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8f6c05e2-d9bb-4ef9-b842-bed4b5712c5f/id-preview-f0cc63e7--30682b10-3ab3-466f-991a-c1fca1631f6e.lovable.app-1779648331720.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        />
+      </Helmet>
+      <Outlet />
+    </>
   );
 }
 
-function RootComponent() {
-  const { queryClient } = Route.useRouteContext();
+function Helmet({ children }: { children: React.ReactNode }) {
+  React.useEffect(() => {
+    // This is a simple implementation of helmet for client-side rendering
+  }, [children]);
 
-  return (
-    <QueryClientProvider client={queryClient}>
-      <Outlet />
-    </QueryClientProvider>
-  );
+  return null;
 }

@@ -40,6 +40,7 @@ export function Hero() {
       <div className="mx-auto max-w-7xl px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left */}
         <div className="lg:col-span-4 relative">
+          <p className="font-display italic text-nude text-lg mb-4">Viva seu cabelo real!</p>
           <h1 className="font-display text-6xl lg:text-7xl xl:text-8xl leading-[0.95] text-ink">
             Beleza que
             <br />
@@ -51,11 +52,13 @@ export function Hero() {
             <span className="italic">seus cachos</span>
           </h1>
           <a
-            href="#sobre"
-            className="mt-12 inline-flex items-center gap-4 group"
+            href="https://www.trinks.com/studio-juliana-tavares"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-12 inline-flex items-center gap-3 bg-sage-dark text-cream rounded-full px-8 py-4 text-base font-medium hover:bg-ink transition-colors group"
           >
-            <span className="font-display italic text-xl text-ink">Saiba mais</span>
-            <CircleArrow className="text-sage-dark transition-transform duration-300 group-hover:translate-x-1" />
+            Agendar horário
+            <span className="transition-transform group-hover:translate-x-1">→</span>
           </a>
         </div>
 
@@ -73,7 +76,7 @@ export function Hero() {
           <div className="jt-hero-back hero-img-secondary relative w-[220px] h-[320px] md:w-[280px] md:h-[400px] shrink-0 mb-12">
             <ArchedImage
               bg="sage-dark"
-              src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=800&q=80&fit=crop"
+              src="https://images.unsplash.com/photo-1677331402102-60c7e54d58c2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNhYmVsbyUyMGVucm9sYWRvfGVufDB8fDB8fHww"
               alt="Mulher com cabelo cacheado natural"
               className="w-full h-full"
               offset={24}
