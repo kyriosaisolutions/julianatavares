@@ -7,21 +7,21 @@ import { ArchedImage } from "./ArchedImage";
 
 const cols = [
   [
-    { src: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80", h: "h-[360px]" },
-    { src: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80", h: "h-[280px]" },
+    { src: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80&fit=crop", h: "h-[360px]" },
+    { src: "https://images.unsplash.com/photo-1604004555489-723a93d6ce74?w=800&q=80&fit=crop", h: "h-[280px]" },
   ],
   [
-    { src: "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80", h: "h-[260px]" },
-    { src: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=600&q=80", h: "h-[380px]" },
+    { src: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=800&q=80&fit=crop", h: "h-[260px]" },
+    { src: "https://images.unsplash.com/photo-1488207984690-cbe539ea9eb2?w=800&q=80&fit=crop", h: "h-[380px]" },
   ],
   [
-    { src: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80", h: "h-[340px]" },
-    { src: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=600&q=80", h: "h-[300px]" },
+    { src: "https://images.unsplash.com/photo-1576661416480-2c1a13c3aff5?w=800&q=80&fit=crop", h: "h-[340px]" },
+    { src: "https://images.unsplash.com/photo-1542596594-649edbc13630?w=800&q=80&fit=crop", h: "h-[300px]" },
   ],
 ];
 
 const speeds = [-8, -14, -5];
-const bgs = ["sage-light", "nude-light", "sage"] as const;
+const bgs = ["sage-light", "sage", "sage-dark"] as const;
 
 export function Gallery() {
   const root = useRef<HTMLElement>(null);
@@ -59,9 +59,9 @@ export function Gallery() {
           </h2>
         </motion.div>
 
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-6 lg:gap-10">
+        <div className="gallery mt-16 grid grid-cols-2 md:grid-cols-3 gap-6 lg:gap-10">
           {cols.map((col, i) => (
-            <div key={i} className="jt-gallery-col flex flex-col gap-6 lg:gap-10">
+            <div key={i} className="jt-gallery-col gallery-col flex flex-col gap-6 lg:gap-10">
               {col.map((it, j) => (
                 <motion.div
                   key={j}

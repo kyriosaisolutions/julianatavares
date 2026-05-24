@@ -43,7 +43,7 @@ export function Header() {
           href="https://wa.me/5500000000000"
           target="_blank"
           rel="noreferrer"
-          className="rounded-full border border-nude text-nude px-6 py-2.5 text-sm hover:bg-nude hover:text-cream transition-colors"
+          className="rounded-full border border-sage-dark text-sage-dark px-6 py-2.5 text-sm hover:bg-sage hover:text-cream hover:border-sage transition-colors"
         >
           Agendar horário
         </a>

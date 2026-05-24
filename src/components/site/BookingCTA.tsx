@@ -23,7 +23,7 @@ export function BookingCTA() {
           href="https://wa.me/5500000000000"
           target="_blank"
           rel="noreferrer"
-          className="mt-10 inline-flex items-center gap-3 bg-nude text-ink rounded-full px-10 py-5 text-lg font-medium hover:bg-nude-light transition-colors group"
+          className="mt-10 inline-flex items-center gap-3 bg-cream text-ink rounded-full px-10 py-5 text-lg font-medium hover:bg-sage-dark hover:text-cream transition-colors group"
         >
           <MessageCircle size={22} />
           Agendar pelo WhatsApp
