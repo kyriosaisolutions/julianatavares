@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArchedImage } from "./ArchedImage";
 import { CurvedText } from "./CurvedText";
 import { CircleArrow } from "./CircleArrow";
-import { Instagram, MessageCircle, Music2 } from "lucide-react";
+import { Instagram, MessageCircle, Facebook } from "lucide-react";
 
 export function Hero() {
   const root = useRef<HTMLElement>(null);
@@ -73,8 +73,8 @@ export function Hero() {
           <div className="jt-hero-back hero-img-secondary relative w-[220px] h-[320px] md:w-[280px] md:h-[400px] shrink-0 mb-12">
             <ArchedImage
               bg="sage-dark"
-              src="https://images.unsplash.com/photo-1554519515-242161756769?w=800&q=80&fit=crop"
-              alt="Mulher com cabelo crespo"
+              src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=800&q=80&fit=crop"
+              alt="Mulher com cabelo cacheado natural"
               className="w-full h-full"
               offset={24}
             />
@@ -91,9 +91,9 @@ export function Hero() {
         {/* Social rail */}
         <div className="hidden lg:flex flex-col items-center gap-4 absolute right-6 top-1/2 -translate-y-1/2 text-nude">
           <div className="w-px h-16 bg-nude/60" />
-          <a href="#" aria-label="Instagram" className="hover:scale-110 transition"><Instagram size={18} /></a>
-          <a href="#" aria-label="WhatsApp" className="hover:scale-110 transition"><MessageCircle size={18} /></a>
-          <a href="#" aria-label="TikTok" className="hover:scale-110 transition"><Music2 size={18} /></a>
+          <a href="https://instagram.com/juliana.cabelosreais" target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:scale-110 transition"><Instagram size={18} /></a>
+          <a href="https://wa.me/5581985880205" target="_blank" rel="noreferrer" aria-label="WhatsApp" className="hover:scale-110 transition"><MessageCircle size={18} /></a>
+          <a href="https://facebook.com/StudioJuTavares" target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:scale-110 transition"><Facebook size={18} /></a>
           <div className="w-px h-16 bg-nude/60" />
         </div>
       </div>
