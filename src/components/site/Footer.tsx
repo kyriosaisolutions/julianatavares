@@ -1,5 +1,5 @@
 import { JTLogo } from "./JTLogo";
-import { Instagram, MessageCircle, Music2 } from "lucide-react";
+import { Instagram, MessageCircle, Facebook } from "lucide-react";
 
 export function Footer() {
   return (
@@ -13,9 +13,9 @@ export function Footer() {
               Beleza que respeita a sua textura natural.
             </p>
             <div className="mt-6 flex gap-4 text-nude">
-              <a href="#" aria-label="Instagram"><Instagram size={18} /></a>
-              <a href="#" aria-label="WhatsApp"><MessageCircle size={18} /></a>
-              <a href="#" aria-label="TikTok"><Music2 size={18} /></a>
+              <a href="https://instagram.com/juliana.cabelosreais" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={18} /></a>
+              <a href="https://wa.me/5581985880205" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={18} /></a>
+              <a href="https://facebook.com/StudioJuTavares" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook size={18} /></a>
             </div>
           </div>
 
@@ -32,10 +32,20 @@ export function Footer() {
           <div>
             <h4 className="font-display italic text-nude text-xl">Contato</h4>
             <ul className="mt-4 space-y-2 text-sm text-ink/70">
-              <li>contato@julianatavares.com.br</li>
-              <li>WhatsApp: (00) 00000-0000</li>
-              <li>Rua Exemplo, 123 — Sua Cidade/UF</li>
-              <li>Ter–Sáb · 9h às 19h</li>
+              <li>
+                <a href="https://wa.me/5581985880205" target="_blank" rel="noreferrer" className="hover:text-nude">
+                  WhatsApp: (81) 98588-0205
+                </a>
+              </li>
+              <li className="leading-relaxed">
+                Empresarial Phoenix · Av. João de Barros, 1527<br />
+                Sala 102 · Espinheiro, Recife – PE, 52021-180
+              </li>
+              <li>
+                <a href="https://trinks.com/studio-juliana-tavares" target="_blank" rel="noreferrer" className="hover:text-nude">
+                  Agendamento online →
+                </a>
+              </li>
             </ul>
           </div>
         </div>
