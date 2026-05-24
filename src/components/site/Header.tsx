@@ -40,10 +40,10 @@ export function Header() {
           ))}
         </nav>
         <a
-          href="https://wa.me/5500000000000"
+          href="https://trinks.com/studio-juliana-tavares"
           target="_blank"
           rel="noreferrer"
-          className="rounded-full border border-sage-dark text-sage-dark px-6 py-2.5 text-sm hover:bg-sage hover:text-cream hover:border-sage transition-colors"
+          className="rounded-full border border-sage-dark text-sage-dark px-6 py-2.5 text-sm hover:bg-sage-dark hover:text-cream hover:border-sage-dark transition-colors"
         >
           Agendar horário
         </a>
